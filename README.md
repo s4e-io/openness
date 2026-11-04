@@ -1,6 +1,7 @@
 <h1 align="center">
-  <img src="static/openness-logo.svg" alt="openness" width="300px">
+  <img src="static/openness-logo.svg" alt="OpenNess Vulnerability Scanner" width="300px">
   <br>
+  OpenNess Vulnerability Scanner
 </h1>
 
 <h4 align="center">A better open source alternative to Nessus, built for the age of autonomous cybersecurity.</h4>
@@ -24,7 +25,7 @@
 
 > **Planned by cybersecurity experts. Developed with AI models. Created for everyone.**
 
-**Openness** is an open source vulnerability assessment and security evidence platform. It collects real system evidence, resolves vulnerabilities with the vendors' own security intelligence, and produces **explainable, verifiable, machine-readable findings**.
+**OpenNess Vulnerability Scanner** is an open source vulnerability assessment and security evidence platform. It collects real system evidence, resolves vulnerabilities with the vendors' own security intelligence, and produces **explainable, verifiable, machine-readable findings**.
 
 Our goal goes beyond vulnerability scanning: we want to create the **open security data layer that future AI agents need to observe, reason, remediate, act and verify safely.**
 
