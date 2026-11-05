@@ -30,7 +30,7 @@
 Our goal goes beyond vulnerability scanning: we want to create the **open security data layer that future AI agents need to observe, reason, remediate, act and verify safely.**
 
 > [!IMPORTANT]
-> **Beta.** Openness is in beta. Interfaces, file formats and coverage may still change.
+> **Beta.** OpenNess Vulnerability Scanner is in beta. Interfaces, file formats and coverage may still change.
 
 ---
 
