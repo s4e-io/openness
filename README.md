@@ -173,7 +173,7 @@ Openness should not belong to one company, one team, or one AI model. It should 
 
 👨‍💻 **Code** · 🐛 **Report bugs** · 🧪 **Create test environments** · 🔍 **Validate findings** · 📦 **Add platforms** · 🛡️ **Add security feeds** · 💡 **Challenge the architecture**
 
-You can help us prove where Openness is right, **and discover where it is wrong.** Start with the contributing guide of [openness-collector](https://github.com/s4e-io/openness-collector/blob/development/CONTRIBUTING.md) or [openness-resolver](https://github.com/s4e-io/openness-resolver/blob/main/CONTRIBUTING.md).
+You can help us prove where Openness is right, **and discover where it is wrong.** Start with [CONTRIBUTING.md](CONTRIBUTING.md). Collector and resolver have their own guides: [openness-collector](https://github.com/s4e-io/openness-collector/blob/dev/CONTRIBUTING.md) and [openness-resolver](https://github.com/s4e-io/openness-resolver/blob/dev/CONTRIBUTING.md).
 
 ### Let's create a better open source alternative to Nessus, together.
 
