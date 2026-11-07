@@ -1,5 +1,5 @@
 #!/bin/sh
-# Openness installer for Linux and macOS (amd64, arm64).
+# openness installer for Linux and macOS (amd64, arm64).
 #
 #   curl -fsSL https://raw.githubusercontent.com/s4e-io/openness/main/install.sh | sh
 #
@@ -362,7 +362,7 @@ main() {
 	case "$OS" in linux | darwin) ;; *) die "unsupported OS override: $OS" ;; esac
 	case "$ARCH" in amd64 | arm64) ;; *) die "unsupported arch override: $ARCH" ;; esac
 
-	say "Openness installer (beta)"
+	say "openness installer (beta)"
 	say "Platform: $OS/$ARCH"
 	say "Install directory: $INSTALL_DIR"
 	if [ -n "$LOCAL_RELEASES" ]; then
@@ -429,7 +429,7 @@ main() {
 	say "  3. Resolve findings:"
 	say "       openness-resolver resolve --input ./host.openness --output findings.json --data-dir ./openness-data"
 	say ""
-	say "Openness is in beta and licensed under the Apache License 2.0. Developed and maintained by S4E: https://s4e.io"
+	say "openness is in beta and licensed under the Apache License 2.0. Developed and maintained by S4E: https://s4e.io"
 
 	if [ -n "$FAILED" ]; then
 		say ""

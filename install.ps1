@@ -1,4 +1,4 @@
-# Openness installer for Windows (PowerShell 5.1 or later).
+# openness installer for Windows (PowerShell 5.1 or later).
 #
 #   irm https://raw.githubusercontent.com/s4e-io/openness/main/install.ps1 | iex
 #
@@ -137,7 +137,7 @@
     }
 
     $Arch = Get-Arch
-    Write-Host 'Openness installer (beta)'
+    Write-Host 'openness installer (beta)'
     Write-Host "Platform: windows/$Arch"
     Write-Host "Install directory: $InstallDir"
     if ($LocalReleases) { Write-Host "Release source: local directory $LocalReleases" }
@@ -266,7 +266,7 @@
     Write-Host '  3. Resolve findings:'
     Write-Host '       openness-resolver resolve --input .\host.openness --output findings.json --data-dir .\openness-data'
     Write-Host ''
-    Write-Host 'Openness is in beta and licensed under the Apache License 2.0. Developed and maintained by S4E: https://s4e.io'
+    Write-Host 'openness is in beta and licensed under the Apache License 2.0. Developed and maintained by S4E: https://s4e.io'
 
     if ($failed.Count -gt 0) {
         Write-Warning "Not installed: $($failed -join ', ') (see the warnings above)."

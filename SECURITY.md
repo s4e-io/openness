@@ -25,4 +25,4 @@ Never commit credentials, customer evidence, or a real host inventory.
 
 ## Project
 
-Part of the [Openness](https://github.com/s4e-io/openness) project by [S4E IO](https://github.com/s4e-io).
+Part of the [openness](https://github.com/s4e-io/openness) project by [S4E IO](https://github.com/s4e-io).
