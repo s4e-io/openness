@@ -1,4 +1,4 @@
-# Contributing to Openness
+# Contributing to openness
 
 Thank you for your interest in contributing.
 
