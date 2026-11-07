@@ -11,6 +11,8 @@
   <a href="https://getopenness.com/openness/releases/latest"><b>Download openness Desktop</b></a>
   &nbsp;·&nbsp;
   <a href="https://getopenness.com/openness/documentation">Documentation</a>
+  &nbsp;·&nbsp;
+  <a href="whitepaper/openness-whitepaper.pdf">Whitepaper (PDF)</a>
 </p>
 
 <p align="center">
@@ -122,6 +124,8 @@ leaves you to guess why. openness answers, for every finding: **what is affected
 ```text
 System evidence → exact package → vendor rule → fixed version → native comparison → finding
 ```
+
+The design and its evaluation are described in the whitepaper, [*Never Clean Without Evidence: Design and Evaluation of the openness Credentialed Vulnerability Scanner*](whitepaper/openness-whitepaper.pdf) (PDF).
 
 We prefer correct support for fewer platforms over broad coverage built on package-name guessing. What works today is listed in the [collector](https://github.com/s4e-io/openness-collector) and [resolver](https://github.com/s4e-io/openness-resolver) READMEs.
 
