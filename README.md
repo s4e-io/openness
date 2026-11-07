@@ -6,6 +6,14 @@
 <h4 align="center">Credentialed vulnerability scanning with evidence for every finding. An open source alternative to Nessus.</h4>
 
 <p align="center">
+  <a href="https://getopenness.com"><b>getopenness.com</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://getopenness.com/openness/releases/latest"><b>Download openness Desktop</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://getopenness.com/openness/documentation">Documentation</a>
+</p>
+
+<p align="center">
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-1f5fbf"></a>
 <a href="https://github.com/s4e-io/openness-collector/releases"><img src="https://img.shields.io/github/v/release/s4e-io/openness-collector?label=collector"></a>
 <a href="https://github.com/s4e-io/openness-resolver/releases"><img src="https://img.shields.io/github/v/release/s4e-io/openness-resolver?label=resolver"></a>
@@ -19,8 +27,7 @@
   <a href="#-usage">Usage</a> •
   <a href="#-projects">Projects</a> •
   <a href="#-evidence-first">Evidence first</a> •
-  <a href="#-contributing">Contributing</a> •
-  <a href="https://getopenness.com/openness/documentation">Documentation</a>
+  <a href="#-contributing">Contributing</a>
 </p>
 
 **openness** finds the vulnerabilities on your Linux and Windows servers by reading what is really installed, matching it against each vendor's own security data and comparing versions the way the vendor's package manager does. Every finding says what is affected, which rule applies, which version fixes it and which evidence it is based on.
@@ -42,11 +49,15 @@
 
 ## 📥 Install
 
-**openness Desktop** (recommended): the app with a web UI. It adds your servers, runs the scans and shows the findings and the fixes. The collector and the resolver are built in.
+### openness Desktop (recommended)
 
-Windows, macOS and Linux (deb, rpm): [download](https://getopenness.com/openness/releases/latest) · [install guide](https://getopenness.com/openness/documentation)
+The app with a web UI. It adds your servers, runs the scans and shows the findings and the fixes. The collector and the resolver are built in. Free for up to 20 servers.
 
-**Command line tools** (collector and resolver), for automation and CI:
+**[Download for Windows, macOS and Linux](https://getopenness.com/openness/releases/latest)** · [install guide](https://getopenness.com/openness/documentation) · [plans](https://getopenness.com/pricing)
+
+### Command line tools
+
+The collector and the resolver on their own, for automation and CI:
 
 ```sh
 # Linux / macOS
