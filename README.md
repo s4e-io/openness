@@ -29,6 +29,7 @@
   <a href="#-usage">Usage</a> •
   <a href="#-projects">Projects</a> •
   <a href="#-evidence-first">Evidence first</a> •
+  <a href="#-severity-vendor-rating-or-cvss">Severity</a> •
   <a href="#-contributing">Contributing</a>
 </p>
 
@@ -45,6 +46,7 @@
 - **Vendor data, native comparators.** Ubuntu OVAL and USN, the Debian Security Tracker, Alpine secdb, Red Hat, Rocky, AlmaLinux, Amazon Linux, openSUSE, Microsoft MSRC, OSV for PyPI, with dpkg, rpm, apk and PEP 440 version rules.
 - **Windows applications.** The [application catalog](https://github.com/s4e-io/openness-app-mapper) maps installed programs to NVD products, rebuilt from NVD every day.
 - **Containers and network devices.** Packages inside running containers, and network devices over SNMPv3.
+- **Severity the vendor gives, CVSS next to it.** Findings are rated by the operating system vendor's own rating for that release; the NVD CVSS score is shown on every finding and can be used for counting instead. [How severity works](#-severity-vendor-rating-or-cvss)
 - **No false all-clear.** A host whose packages could not be read, or whose distribution has no data, is reported as a coverage gap, never as clean.
 - **Machine-readable findings.** JSON with the reasons and evidence of every result, for people, pipelines and AI agents.
 - **Works offline.** Vulnerability data and licenses can be loaded from files on air-gapped networks.
@@ -128,6 +130,27 @@ System evidence → exact package → vendor rule → fixed version → native c
 The design and its evaluation are described in the whitepaper, [*Never Clean Without Evidence: Design and Evaluation of the openness Credentialed Vulnerability Scanner*](whitepaper/openness-whitepaper.pdf) (PDF).
 
 We prefer correct support for fewer platforms over broad coverage built on package-name guessing. What works today is listed in the [collector](https://github.com/s4e-io/openness-collector) and [resolver](https://github.com/s4e-io/openness-resolver) READMEs.
+
+## 🎯 Severity: vendor rating or CVSS
+
+A CVE has two severities, and they often disagree:
+
+| | NVD CVSS score | Vendor rating |
+|---|---|---|
+| Who rates | NVD, once for every product | Canonical, Debian, Red Hat, SUSE, Microsoft and others, for their own release |
+| What it says | How serious the flaw is in general | How serious it is as built and shipped on that system |
+| Used by | Most scanners, Nessus included | openness, by default |
+
+openness counts by the vendor's rating for the same reason it uses vendor data everywhere else: the vendor knows its own build. A flaw that is critical in general can be low on a release where the feature is disabled or hardened, and the other way round.
+
+What that means in a result:
+
+- **The CVSS score is always shown**, with its CVSS version (4.0, 3.1, 3.0 or 2.0: the newest one NVD has published for that CVE).
+- **A CVE the vendor has not rated** takes the band of its CVSS score, and the finding says so. A finding is never given a severity that no source states.
+- **Windows applications and network devices** have no distribution vendor, so they carry the NVD severity and score.
+- **You can switch.** In openness Desktop the severity source is a setting, `vendor` or `cvss`, and a finished scan can be scored again without touching a server. Under `cvss` the bands are 9.0 and above critical, 7.0 high, 4.0 medium, below that low, and every finding keeps the vendor's rating in its reasons.
+
+Comparing counts with another scanner? Switch the scan to `cvss` first: the severity counts differ between the two sources, the findings, fixed versions and updates do not. The details are in Section 7.3 of the [whitepaper](whitepaper/openness-whitepaper.pdf).
 
 ---
 
